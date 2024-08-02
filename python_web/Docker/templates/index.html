@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+    <!-- Add any CSS or other dependencies here -->
+</head>
+<body>
+    <h1>Welcome to My Flask App!</h1>
+    <p>This is the home page.</p>
+    <a href="{{ url_for('login') }}">Go to Login</a>
+    <a href="{{url_for('register') }}">Register</a>
+</body>
+</html>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome {{ session['username'] if 'username' in session else 'Guest'}}</h1>
+    <div class="container">
+        <h1>Hello World!</h1>
+        <p>Welcome to My Flask App!</p>
+        <p>This is a simple template for your Flask application. Feel free to customize it further!</p>
+        <p>If you're seeing this, it means your Flask app is up and running. 🚀</p>
+    </div>
+</body>
+</html>

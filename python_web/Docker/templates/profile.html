@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App - Profile</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .profile-image {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Profile</h1>
+    {% if session['username'] %}
+        <p>Welcome, <strong>{{ session['username'] }}</strong>!</p>
+    {% else %}
+        <p>This is your profile page.</p>
+    {% endif %}
+    <!-- Add user-specific content here -->
+    <img src="4k resolution of dra.jpg" alt="Your Profile Image" class="profile-image">
+</body>
+</html>
